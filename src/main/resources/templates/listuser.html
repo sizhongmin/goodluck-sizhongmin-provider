@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+<center>
+    <h1>欢迎进入展示列表页面</h1>
+    <form action="byname.action" method="post">
+        <label>用户名:</label>
+        <input type="text" name="name"/><input type="submit" value="查询"/>
+    </form>
+    <table border="1"  width="80%">
+  <tr>
+
+      <th>ID</th>
+      <th>姓名</th>
+      <th>密码</th>
+      <th>性别</th>
+      <th>年龄</th>
+      <th>爱好</th>
+      <th>操作</th>
+  </tr>
+  <tr th:each="user:${list}">
+       <td th:text="${user.id}"></td>
+      <td th:text="${user.name}"></td>
+      <td th:text="${user.pwd}"></td>
+      <td th:text="${user.age}"></td>
+      <td th:text="${user.sex}"></td>
+      <td th:text="${user.hobby}"></td>
+      <td><a href="delect.action?id=${user.id}">删除</a></td>
+      <td><a href="byid.action?id="${user.id}>修改</a></td>
+  </tr>
+
+
+    </table>
+
+</center>
+
+</body>
+</html>

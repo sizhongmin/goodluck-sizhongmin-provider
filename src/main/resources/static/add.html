@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+<center>
+    <h1>欢迎进入注册页面</h1>
+    <h1 align="right"><a href="tologin.action">登录</a></sa></h1>
+    <form action="add.action" method="post">
+        <label>用户名:</label>
+        <input type="text" name="name"/><br/>
+        <label>密码：</label>
+        <input type="password" name="pwd"/><br/>
+        <label>年龄：</label>
+        <select name="age">
+            <option value="21">21</option>
+            <option value="25">25</option>
+            <option value="28">28</option>
+            <option value="31">31</option>
+            <option value="33">33</option>
+        </select><br/>
+       <label>性别：</label>
+       <input  type="radio" name="sex" value="男"/>男<input type="radio" name="sex" value="女"/>女<br/>
+        <label>爱好：</label>
+        <input type="checkbox" name="hobby" value="看书">看书<input type="checkbox" name="hobby" value="羽毛球">羽毛球<input type="checkbox" name="hobby" value="学习">学习
+        <input type="checkbox" name="hobby" value="玩耍">玩耍 <input type="checkbox" name="hobby" value="游戏">游戏
+        <input type="checkbox" name="hobby" value="篮球">篮球<br/>
+        <input type="submit" value="注册"/>
+    </form>
+
+
+</center>
+
+</body>
+</html>
